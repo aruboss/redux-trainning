@@ -1,5 +1,5 @@
-import {createStore} from 'redux';
-import {status, store} from './actions/index';
+import { createStore } from 'redux';
+import {status, sort} from './actions/index';
 import myReducer from './reducers/index';
 
 
@@ -11,7 +11,7 @@ store.dispatch(status());
 console.log('TOGGLE_STATUS: ',store.getState());
 
 //Thực hiện công việc sắp xếp tên từ Z-A
-store.dispatch(({
+store.dispatch(sort({
 	by: 'name',
 	value: -1
 }));
